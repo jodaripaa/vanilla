@@ -22,7 +22,7 @@ Construir y ejecutar con Docker (ejemplos para Windows cmd.exe)
 1) Construir imagen:
 
 ```cmd
-cd "c:\Users\Pc\Desktop\galindo hijueputa\html-boostrap"
+cd "c:\Users\Pc\Desktop\galindo\html-boostrap"
 docker build -t todo-app .
 ```
 
@@ -35,7 +35,7 @@ docker run --rm -p 5000:80 --name todo-app todo-app
 3) Usar docker-compose (usa `.env` para el puerto):
 
 ```cmd
-cd "c:\Users\Pc\Desktop\galindo hijueputa\html-boostrap"
+cd "c:\Users\Pc\Desktop\galindo \html-boostrap"
 docker-compose up --build
 ```
 
