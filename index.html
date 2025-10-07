@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App - Vanilla JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 ToDo Manager</h1>
+            <p>Proyecto 1 - HTML + CSS + JavaScript</p>
+        </header>
+
+        <div class="app-wrapper">
+            <div class="form-section">
+                <h2 style="margin-bottom: 20px;">Nueva Tarea</h2>
+                <form id="todoForm">
+                    <input type="hidden" id="todoId">
+                    
+                    <div class="form-group">
+                        <label for="title">Título *</label>
+                        <input type="text" id="title" required placeholder="Ingrese el título">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Descripción</label>
+                        <textarea id="description" placeholder="Ingrese una descripción"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="isCompleted">
+                            <label for="isCompleted">Marcar como completada</label>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn-primary" id="submitBtn">Crear Tarea</button>
+                        <button type="button" class="btn-secondary" id="cancelBtn" style="display: none;">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="todos-section">
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="pending">Pendientes</button>
+                    <button class="filter-btn" data-filter="completed">Completadas</button>
+                </div>
+
+                <div id="todosContainer">
+                    <div class="loading">Cargando tareas...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
